@@ -21,14 +21,14 @@ const defaultStackNavOptions = {
         backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : '',
         },
         headerTitleStyle: {
-            fontFamily: 'open-sans-bold'
+            fontFamily: 'open-sans-bold',
         },
         headerBackTitleStyle: {
             fontFamily: 'open-sans'
         },
         headerTintColor:
             Platform.OS === 'android' ? 'white' : Colors.primaryColor,
-        headerTitle: 'A Screen',
+        // headerTitle: 'A Screen',
         headerTitleStyle: { width: Dimensions.get('window').width }
 }
 
@@ -84,11 +84,11 @@ const SettingsNavigator = createStackNavigator({
 });
 
 // Delete login navigator and from main navigator
-const LoginNavigator = createStackNavigator({
-    Groceries: LoginScreen
-}, {
-    defaultNavigationOptions: defaultStackNavOptions 
-});
+// const LoginNavigator = createStackNavigator({
+//     Login: LoginScreen
+// }, {
+//     defaultNavigationOptions: defaultStackNavOptions 
+// });
 
 
 const MealsFavTabNavigator = createBottomTabNavigator({
@@ -131,7 +131,7 @@ const MainNavigator = createDrawerNavigator({
         drawerLabel: 'Home'
     }},
     Filters: {screen: FiltersNavigator},
-    Logout: {screen: LoginNavigator},
+    Logout: {screen: LoginScreen},
     Settings: {screen: SettingsNavigator}
 }, {
     contentOptions: {
