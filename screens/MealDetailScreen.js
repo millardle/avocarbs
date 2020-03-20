@@ -6,6 +6,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton';
 import DefaultText from '../components/DefaultText';
 import { toggleFavourite } from '../store/actions/meals';
+import Colors from '../constants/colors';
 
 const ListItem = props => {
   return (
@@ -43,9 +44,9 @@ const MealDetailScreen = props => {
     <ScrollView>
       <Image source={{ uri: selectedMeal.imageUrl }} style={styles.image} />
       <View style={styles.details}>
-        <DefaultText>{selectedMeal.duration}m</DefaultText>
+        <DefaultText>Prep Duration: {selectedMeal.duration} minutes</DefaultText>
         <DefaultText>{selectedMeal.complexity.toUpperCase()}</DefaultText>
-        <DefaultText>{selectedMeal.affordability.toUpperCase()}</DefaultText>
+        {/* <DefaultText>{selectedMeal.affordability.toUpperCase()}</DefaultText> */}
       </View>
       <Text style={styles.title}>Ingredients</Text>
       {selectedMeal.ingredients.map(ingredient => (
@@ -55,6 +56,7 @@ const MealDetailScreen = props => {
       {selectedMeal.steps.map(step => (
         <ListItem key={step}>{step}</ListItem>
       ))}
+      <View style={styles.bottom}></View>
     </ScrollView>
   );
 };
@@ -82,24 +84,28 @@ MealDetailScreen.navigationOptions = navigationData => {
 const styles = StyleSheet.create({
   image: {
     width: '100%',
-    height: 200
+    height: 250
   },
   details: {
     flexDirection: 'row',
     padding: 15,
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    backgroundColor: 'white',
+    marginBottom: 10
   },
   title: {
     fontFamily: 'open-sans-bold',
     fontSize: 22,
+    marginVertical: 10,
     textAlign: 'center'
   },
   listItem: {
-    marginVertical: 10,
+    marginVertical: 5,
     marginHorizontal: 20,
-    borderColor: '#ccc',
-    borderWidth: 1,
     padding: 10
+  },
+  bottom: {
+    marginBottom: 50
   }
 });
 

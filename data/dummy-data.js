@@ -2,59 +2,63 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 
 export const CATEGORIES = [
-  new Category('c1', 'Quick', '#008C3F'),
-  new Category('c2', 'Salads', '#008C3F'),
-  new Category('c3', 'Pizza', '#008C3F'),
-  new Category('c4', 'Vegetarian', '#008C3F'),
-  new Category('c5', 'Chicken', '#008C3F'),
-  new Category('c6', 'Fish', '#008C3F'),
-  new Category('c7', 'Pork', '#008C3F'),
-  new Category('c8', 'Eggs', '#008C3F'),
-  new Category('c9', 'Bread', '#008C3F'),
-  new Category('c10', 'Condiments', '#008C3F'),
-  new Category('c11', 'Fast Food', '#008C3F'),
-  new Category('c12', 'Drinks', '#008C3F'),
-  new Category('c13', 'Water', '#008C3F')
-  // new Category('c13', 'Drinks', '#008C3F'),
-  // new Category('b1', 'Breakfast1', '#008C3F'),
-  // new Category('b2', 'Salads', '#008C3F'),
-  // new Category('b3', 'Pizza', '#008C3F'),
+  new Category('c1', 'Top 10', '#008C3F'),
+  new Category('c2', 'Quick & Easy', '#008C3F'),
+  new Category('c3', 'On A Budget', '#008C3F'),
+  new Category('c4', 'Egg', '#008C3F'),
+  new Category('c5', 'Pancake', '#008C3F'),
+  new Category('c6', 'Sandwich', '#008C3F'),
+  new Category('c7', 'Salad', '#008C3F'),
+  new Category('c8', 'Burger', '#008C3F'),
+  new Category('c9', 'Pies', '#008C3F'), 
+  new Category('c10', 'Cauliflower', '#008C3F'),
+  new Category('c11', 'Pizza', '#008C3F'),
+  new Category('c12', 'Pasta', '#008C3F'),
+  new Category('c13', 'Vegetarian', '#008C3F'),
+  new Category('c14', 'Cake', '#008C3F'),
+  new Category('c15', 'Icecream', '#008C3F'),
+  new Category('c16', 'Chocolate', '#008C3F'),
+  new Category('c17', 'Pies', '#008C3F')
   // new Category('b4', 'Vegetarian', '#008C3F'),
 ];
 
+// Recommended
 export const CATEGORIES1 = [
-  new Category('c10', 'Recommended1', '#008C3F'),
-  new Category('c11', 'Recommended2', '#008C3F'),
-  new Category('c12', 'Recommended3', '#008C3F'),
-  new Category('c13', 'Recommended4', '#008C3F'),
+  new Category('c1', 'Top 10', '#008C3F'),
+  new Category('c2', 'Quick & Easy', '#008C3F'),
+  new Category('c3', 'On A Budget', '#008C3F'),
 ];
 
+// Breakfast
 export const CATEGORIES2 = [
-  new Category('c1', 'Breakfast1', '#008C3F'),
-  new Category('c2', 'Breakfast2', '#008C3F'),
-  new Category('c3', 'Breakfast3', '#008C3F'),
-  new Category('c4', 'Breakfast4', '#008C3F')
+  new Category('c4', 'Egg', '#008C3F'),
+  new Category('c5', 'Pancake', '#008C3F'),
+  new Category('c6', 'Sandwich', '#008C3F'),
+  new Category('c7', 'Salad', '#008C3F'), 
 ];
 
+// Lunch
 export const CATEGORIES3 = [
-  new Category('c1', 'Lunch1', '#008C3F'),
-  new Category('c2', 'Lunch2', '#008C3F'),
-  new Category('c3', 'Lunch3', '#008C3F'),
-  new Category('c4', 'Lunch4', '#008C3F')
+  new Category('c7', 'Salad', '#008C3F'),
+  new Category('c8', 'Burger', '#008C3F'),
+  new Category('c9', 'Pies', '#008C3F'),
+
 ];
 
+// Dinner
 export const CATEGORIES4 = [
-  new Category('c1', 'Dinner1', '#008C3F'),
-  new Category('c2', 'Dinner2', '#008C3F'),
-  new Category('c3', 'Dinner3', '#008C3F'),
-  new Category('c4', 'Dinner4', '#008C3F')
+  new Category('c10', 'Cauliflower', '#008C3F'),
+  new Category('c11', 'Pizza', '#008C3F'),
+  new Category('c12', 'Pasta', '#008C3F'),
+  new Category('c13', 'Vegetarian', '#008C3F')
 ];
 
+// Snacks & Desserts
 export const CATEGORIES5 = [
-  new Category('c1', 'Snack1', '#008C3F'),
-  new Category('c2', 'Snack2', '#008C3F'),
-  new Category('c3', 'Snack3', '#008C3F'),
-  new Category('c4', 'Snack4', '#008C3F')
+  new Category('c14', 'Cake', '#008C3F'),
+  new Category('c15', 'Icecream', '#008C3F'),
+  new Category('c16', 'Chocolate', '#008C3F'),
+  new Category('c17', 'Pies', '#008C3F')
 ];
 
 export const MEALS = [
@@ -382,9 +386,38 @@ export const MEALS = [
     ['c13'],
     'New Item',
     'luxurious',
+    '7g net carbs',
+    'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
+    1,
+    [
+      '• White and Green Asparagus',
+      '• 30g Pine Nuts',
+      '• 300g Cherry Tomatoes',
+      '• Salad',
+      '• Salt, Pepper and Olive Oil'
+    ],
+    [
+      '1. Wash, peel and cut the asparagus',
+      '2. Cook in salted water',
+      '3. Salt and pepper the asparagus',
+      '4. Roast the pine nuts',
+      '5. Halve the tomatoes',
+      '6. Mix with asparagus, salad and dressing',
+      '7. Serve with Baguette'
+    ],
+    true,
+    true,
+    true,
+    true
+  ),
+  new Meal(
+    'm12',
+    ['c13'],
+    'New Item',
+    'luxurious',
     'simple',
     'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
-    30,
+    5,
     [
       'White and Green Asparagus',
       '30g Pine Nuts',

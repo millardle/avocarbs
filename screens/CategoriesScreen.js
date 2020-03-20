@@ -24,7 +24,7 @@ const CategoriesScreen = props => {
         return (
             <CategoryGridTile 
             title={itemData.item.title}
-            // color={itemData.item.color}
+            color={itemData.item.color}
             onSelect={() => {
             props.navigation.navigate({
                 routeName: 'CategoryMeals',
@@ -41,7 +41,7 @@ const CategoriesScreen = props => {
         return (
             <CategoryGridTile2
             title={itemData.item.title}
-            // color={itemData.item.color}
+            color={itemData.item.color}
             onSelect={() => {
             props.navigation.navigate({
                 routeName: 'CategoryMeals',
@@ -110,7 +110,7 @@ const CategoriesScreen = props => {
         <View style={styles.searchbar}>
             <TextInput placeholder='Search' style={styles.searchtext} />
         </View>
-        <Text style={styles.title}>Recommended Categories</Text>
+        <Text style={styles.title}>Recommended</Text>
         <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -139,7 +139,7 @@ const CategoriesScreen = props => {
         showsHorizontalScrollIndicator={false}
         renderItem={renderGridItem2} 
         />
-        <Text style={styles.title}>Snacks</Text>
+        <Text style={styles.title}>Snacks & Desserts</Text>
         <FlatList
         data={CATEGORIES5}
         horizontal

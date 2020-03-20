@@ -21,7 +21,7 @@ const CategoryGridTile2 = props => {
         style={styles.touchableCmp}
         onPress={props.onSelect}
     >
-        <View style={{ ...styles.container, ...{ backgroundColor: 'white'} }}>
+        <View style={{ ...styles.container, ...{ backgroundColor: props.color } }}>
             <Text style={styles.title} numberOfLines={2}>{props.title}</Text>
         </View>
     </TouchableCmp>
