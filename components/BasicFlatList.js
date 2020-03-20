@@ -5,14 +5,25 @@ import flatListData from '../data/flatListData';
 import Swipeout from 'react-native-swipeout';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 import AddModal from './AddModal';
+import EditModal from './EditModal';
 
 class FlatListItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeRowKey: null
+            activeRowKey: null,
+            itemUpdate: 0
         }
     }
+
+    refreshFlatList = () => {
+        this.setState((prevState) => {
+            return {
+                itemUpdate: prevState.itemUpdate + 1
+            };
+        })
+    }
+
     render() {
 
         const swipeSettings = {
@@ -27,6 +38,12 @@ class FlatListItem extends Component {
                 this.setState({ activeRowKey: this.props.item.key });
             },
             right: [
+                {
+                    onPress: () => {
+                        this.props.parentFlatList.refs.editModal.showEditModal(flatListData[this.props.index], this);
+                    },
+                    text: 'Edit', type: 'primary'
+                },
                 {
                     onPress: () => {
                         const deletingRow = this.state.activeRowKey;
@@ -126,6 +143,9 @@ export default class BasicFlatList extends Component {
                 <AddModal ref={'addModal'} parentFlatList={this}>
 
                 </AddModal>
+                <EditModal ref={'editModal'} parentFlatList={this}>
+
+                </EditModal>
             </View>
         )
     }
