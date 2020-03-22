@@ -122,7 +122,7 @@ export default class BasicFlatList extends Component {
 
                 </FlatList>
                 <View style={{
-                    backgroundColor: 'tomato',
+                    backgroundColor: '#FFFFFF',
                     height: 64,
                     flexDirection: 'row',
                     justifyContent: 'flex-end',
@@ -130,7 +130,7 @@ export default class BasicFlatList extends Component {
                 }}>
                 <TouchableHighlight
                 style={{marginRight: 10}}
-                underlayColor='tomato'
+                underlayColor='#FFFFFF'
                 onPress={this._onPressAdd}
                 >
                     <Image 
