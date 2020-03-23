@@ -131,8 +131,7 @@ const MainNavigator = createDrawerNavigator({
         drawerLabel: 'Recipes'
     }},
     Filters: {screen: FiltersNavigator},
-    Logout: {screen: LoginScreen},
-    Settings: {screen: SettingsNavigator}
+    Logout: {screen: LoginScreen}
 }, {
     contentOptions: {
         activeTintColor: Colors.primaryColor,

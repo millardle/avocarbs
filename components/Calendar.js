@@ -1,95 +1,124 @@
-import React, {Component} from 'react';
-import {Alert, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {Agenda} from 'react-native-calendars';
+import React, { Component } from 'react';
+import { AppRegistry, FlatList, StyleSheet, Text, View, Alert, Platform, Image } from 'react-native';
+import flatListData from '../data/calendarData';
 
+import Swipeout from 'react-native-swipeout';
+import { TouchableHighlight } from 'react-native-gesture-handler';
+import AddModal from './AddModal';
+import EditModal from './EditModalCalendar';
 
-export default class AgendaScreen extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      items: {}
-    };
-  }
-
-  render() {
-    return (
-      <Agenda
-        items={this.state.items}
-        loadItemsForMonth={this.loadItems.bind(this)}
-        selected={'2020-01-01'}
-        renderItem={this.renderItem.bind(this)}
-        renderEmptyDate={this.renderEmptyDate.bind(this)}
-        rowHasChanged={this.rowHasChanged.bind(this)}
-      />
-    );
-  }
-
-  loadItems(day) {
-    setTimeout(() => {
-      for (let i = -15; i < 85; i++) {
-        const time = day.timestamp + i * 24 * 60 * 60 * 1000;
-        const strTime = this.timeToString(time);
-        if (!this.state.items[strTime]) {
-          this.state.items[strTime] = [];
-          const numItems = Math.floor(Math.random() * 5);
-          for (let j = 0; j < numItems; j++) {
-            this.state.items[strTime].push({
-              name: 'Item for ' + strTime + ' #' + j,
-              height: Math.max(50, Math.floor(Math.random() * 150))
-            });
-          }
+class FlatListCalendar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeRowKey: null,
+            itemUpdate: 0
         }
-      }
-      const newItems = {};
-      Object.keys(this.state.items).forEach(key => {newItems[key] = this.state.items[key];});
-      this.setState({
-        items: newItems
-      });
-    }, 1000);
-  }
+    }
 
-  renderItem(item) {
-    return (
-      <TouchableOpacity 
-        style={[styles.item, {height: item.height}]} 
-        onPress={() => Alert.alert(item.name)}
-      >
-        <Text>{item.name}</Text>
-      </TouchableOpacity>
-    );
-  }
+    refreshFlatList = () => {
+        this.setState((prevState) => {
+            return {
+                itemUpdate: prevState.itemUpdate + 1
+            };
+        })
+    }
 
-  renderEmptyDate() {
-    return (
-      <View style={styles.emptyDate}>
-        <Text>This is empty date!</Text>
-      </View>
-    );
-  }
+    render() {
 
-  rowHasChanged(r1, r2) {
-    return r1.name !== r2.name;
-  }
+        const swipeSettings = {
+            autoClose: true,
+            onClose: (secId, rowId, direction) => {
+                if(this.state.activeRowKey != null) {
+                    this.setState({ activeRowKey: null });
+                }
+            },
 
-  timeToString(time) {
-    const date = new Date(time);
-    return date.toISOString().split('T')[0];
-  }
+            onOpen: (secId, rowId, direction) => {
+                this.setState({ activeRowKey: this.props.item.key });
+            },
+            right: [
+                {
+                    onPress: () => {
+                        this.props.parentFlatList.refs.editModal.showEditModal(flatListData[this.props.index], this);
+                    },
+                    text: 'Edit', type: 'primary'
+                }
+            ],
+            rowId: this.props.index,
+            sectionId: 1
+        };
+
+        return (
+            <Swipeout {...swipeSettings}>
+                <View style={{
+                    flex: 1,
+                    backgroundColor: 'white',
+                    marginBottom: 1,
+                }}>
+                    <Text style={styles.flatListCalendar}>{this.props.item.name}</Text>
+                    <Text style={styles.flatListCalendar}>{this.props.item.itemDescription}</Text>
+                </View>
+            </Swipeout>
+
+        )
+    }
+}
+
+export default class Calendar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = ({
+            deletedRowKey: null,
+        });
+        this._onPressAdd = this._onPressAdd.bind(this);
+    }
+    refreshFlatList = (activeKey) => {
+        this.setState((prevState) => {
+            return {
+                deletedRowKey: activeKey
+            }
+        });
+        this.refs.flatList.scrollToEnd();
+    }
+
+    _onPressAdd () {
+        // alert('Added Item')
+        this.refs.addModal.showAddModal();
+    }
+
+    render(){
+        return(
+            <View style={{flex:1, marginTop: Platform.OS === 'android' ? 0 : 34}}>
+
+                <FlatList
+                ref={'flatList'}
+                data={flatListData} 
+                renderItem={({item, index}) => {
+                    // console.log(`Item = ${JSON.stringify(item)}, index = ${index}`);
+                    return (<FlatListCalendar item={item} index={index} parentFlatList={this}>
+
+                    </FlatListCalendar>);
+                }}
+                >
+
+                </FlatList>
+
+                <AddModal ref={'addModal'} parentFlatList={this}>
+
+                </AddModal>
+                <EditModal ref={'editModal'} parentFlatList={this}>
+
+                </EditModal>
+            </View>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
-  item: {
-    backgroundColor: 'white',
-    flex: 1,
-    borderRadius: 5,
-    padding: 10,
-    marginRight: 10,
-    marginTop: 17
-  },
-  emptyDate: {
-    height: 15,
-    flex:1,
-    paddingTop: 30
-  }
+    flatListCalendar: {
+        color: 'black',
+        padding: 10,
+        fontSize: 16
+    }
 });

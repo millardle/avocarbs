@@ -92,7 +92,6 @@ const FilterSwitch = props => {
         <HeaderButtons HeaderButtonComponent={HeaderButton}>
             <Item
             title="Save"
-            iconName="ios-save"
             onPress={navData.navigation.getParam('save')}
             />
         </HeaderButtons>

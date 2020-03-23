@@ -6,6 +6,7 @@ import HeaderButton from '../components/HeaderButton';
 import BasicFlatList from '../components/BasicFlatList';
 
 const GroceryListScreen = props => {
+
     return (
       <View style={styles.screen}>
         <BasicFlatList />

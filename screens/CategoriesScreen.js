@@ -107,9 +107,9 @@ const CategoriesScreen = props => {
 
     return (
         <ScrollView>
-        <View style={styles.searchbar}>
+        {/* <View style={styles.searchbar}>
             <TextInput placeholder='Search' style={styles.searchtext} />
-        </View>
+        </View> */}
         <Text style={styles.title}>Recommended</Text>
         <FlatList
         horizontal
