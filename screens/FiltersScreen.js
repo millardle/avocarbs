@@ -7,6 +7,7 @@ import Colors from '../constants/colors';
 import { useDispatch } from 'react-redux';
 
 import { setFilters } from '../store/actions/meals';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const FilterSwitch = props => {
     return (

@@ -3,11 +3,12 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import HeaderButton from '../components/HeaderButton';
+import FiltersScreen from './FiltersScreen';
 
 const SettingsScreen = props => {
     return (
         <View style={styles.screen}>
-          <Text>Settings Panel</Text>
+          <FiltersScreen />
         </View>
       );
 }

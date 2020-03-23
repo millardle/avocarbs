@@ -2,29 +2,29 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 
 export const CATEGORIES = [
-  new Category('c1', 'Top 10', '#008C3F'),
-  new Category('c2', 'Quick & Easy', '#008C3F'),
-  new Category('c3', 'On A Budget', '#008C3F'),
-  new Category('c4', 'Egg', '#008C3F'),
-  new Category('c5', 'Pancake', '#008C3F'),
-  new Category('c6', 'Sandwich', '#008C3F'),
-  new Category('c7', 'Salad', '#008C3F'),
-  new Category('c8', 'Burger', '#008C3F'),
-  new Category('c9', 'Pies', '#008C3F'), 
-  new Category('c10', 'Cauliflower', '#008C3F'),
-  new Category('c11', 'Pizza', '#008C3F'),
-  new Category('c12', 'Pasta', '#008C3F'),
-  new Category('c13', 'Vegetarian', '#008C3F'),
-  new Category('c14', 'Cake', '#008C3F'),
-  new Category('c15', 'Icecream', '#008C3F'),
-  new Category('c16', 'Chocolate', '#008C3F'),
-  new Category('c17', 'Pies', '#008C3F')
+  new Category('c1', 'Top 10'),
+  new Category('c2', 'Quick & Easy'),
+  new Category('c3', 'On A Budget'),
+  new Category('c4', 'Egg'),
+  new Category('c5', 'Pancake'),
+  new Category('c6', 'Sandwich'),
+  new Category('c7', 'Salad'),
+  new Category('c8', 'Burger'),
+  new Category('c9', 'Pies'), 
+  new Category('c10', 'Cauliflower'),
+  new Category('c11', 'Pizza'),
+  new Category('c12', 'Pasta'),
+  new Category('c13', 'Vegetarian'),
+  new Category('c14', 'Cake'),
+  new Category('c15', 'Icecream'),
+  new Category('c16', 'Chocolate'),
+  new Category('c17', 'Pies')
   // new Category('b4', 'Vegetarian', '#008C3F'),
 ];
 
 // Recommended
 export const CATEGORIES1 = [
-  new Category('c1', 'Top 10', '#008C3F'),
+  new Category('c1', 'Top 10', '#FFF'),
   new Category('c2', 'Quick & Easy', '#008C3F'),
   new Category('c3', 'On A Budget', '#008C3F'),
 ];

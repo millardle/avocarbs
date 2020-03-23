@@ -78,7 +78,7 @@ const GroceriesNavigator = createStackNavigator({
 });
 
 const SettingsNavigator = createStackNavigator({
-    Groceries: SettingsScreen
+    Filters: FiltersScreen
 }, {
     defaultNavigationOptions: defaultStackNavOptions 
 });
@@ -119,7 +119,7 @@ const MealsFavTabNavigator = createBottomTabNavigator({
             tabBarIcon: (tabInfo) => {
             return <Ionicons name='ios-calendar' size={25} color={tabInfo.tintColor} />;
         }
-    }}
+    }},
     }, {
     tabBarOptions: {
         activeTintColor: Colors.primaryColor
