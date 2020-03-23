@@ -128,7 +128,7 @@ const MealsFavTabNavigator = createBottomTabNavigator({
 
 const MainNavigator = createDrawerNavigator({
     Recipes: {screen: MealsFavTabNavigator, navigationOptions: {
-        drawerLabel: 'Recipes'
+        drawerLabel: 'Home'
     }},
     Filters: {screen: FiltersNavigator},
     Logout: {screen: LoginScreen}

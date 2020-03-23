@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { AppRegistry, FlatList, StyleSheet, Text, View, Alert, Platform, Image } from 'react-native';
+import { AppRegistry, FlatList, StyleSheet, Text, View, Alert, Platform, Image, Button } from 'react-native';
 import flatListData from '../data/flatListData';
 
 import Swipeout from 'react-native-swipeout';
-import { TouchableHighlight } from 'react-native-gesture-handler';
+import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
 import AddModal from './AddModal';
 import EditModal from './EditModal';
 
@@ -42,25 +42,27 @@ class FlatListItem extends Component {
                     onPress: () => {
                         this.props.parentFlatList.refs.editModal.showEditModal(flatListData[this.props.index], this);
                     },
-                    text: 'Edit', type: 'primary'
+                    text: 'Edit',backgroundColor: 'green'
                 },
                 {
                     onPress: () => {
                         const deletingRow = this.state.activeRowKey;
-                        Alert.alert(
-                        'Alert',
-                        'Would you like to delete?',
-                        [
-                            {text: 'No', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-                            {text: 'Yes', onPress: () => {
-                                flatListData.splice(this.props.index, 1);
-                                this.props.parentFlatList.refreshFlatList(deletingRow);
-                            }},
-                        ],
-                        { cancelable: true }
-                        );
+                            flatListData.splice(this.props.index, 1);
+                            this.props.parentFlatList.refreshFlatList(deletingRow);
+                        // Alert.alert(
+                        // 'Alert',
+                        // 'Would you like to delete?',
+                        // [
+                        //     {text: 'No', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                        //     {text: 'Yes', onPress: () => {
+                        //         flatListData.splice(this.props.index, 1);
+                        //         this.props.parentFlatList.refreshFlatList(deletingRow);
+                        //     }},
+                        // ],
+                        // { cancelable: true }
+                        // );
                     },
-                    text: 'Delete', type: 'delete'
+                    text: 'Remove', type: 'delete'
                 }
             ],
             rowId: this.props.index,
@@ -71,7 +73,7 @@ class FlatListItem extends Component {
             <Swipeout {...swipeSettings}>
                 <View style={{
                     flex: 1,
-                    backgroundColor: 'green',
+                    backgroundColor: 'white',
                     marginBottom: 1
                 }}>
                     <Text style={styles.flatListItem}>{this.props.item.name}</Text>
@@ -121,7 +123,7 @@ export default class BasicFlatList extends Component {
                 >
 
                 </FlatList>
-                <View style={{
+                {/* <View style={{
                     backgroundColor: '#FFFFFF',
                     height: 64,
                     flexDirection: 'row',
@@ -129,16 +131,26 @@ export default class BasicFlatList extends Component {
                     alignItems: 'center'
                 }}>
                 <TouchableHighlight
-                style={{marginRight: 10}}
                 underlayColor='#FFFFFF'
                 onPress={this._onPressAdd}
                 >
                     <Image 
-                        style={{width: 50, height: 50}}
-                        source={require('../assets/icon.png')}
+                        style={{width: 20, height: 20, marginRight: 20}}
+                        source={require('../assets/add-icon.png')}
+                        onPress={this._onPressAdd}
                     />
                 </TouchableHighlight>
-                </View>
+                </View> */}
+                <TouchableOpacity
+                style={styles.button}
+                onPress={this._onPressAdd}      
+                >
+                <Text
+                style={styles.buttonText}>
+                Add Grocery Item
+                </Text>
+
+                </TouchableOpacity>
 
                 <AddModal ref={'addModal'} parentFlatList={this}>
 
@@ -153,8 +165,21 @@ export default class BasicFlatList extends Component {
 
 const styles = StyleSheet.create({
     flatListItem: {
-        color: 'white',
+        color: 'black',
         padding: 10,
+        fontSize: 16
+    },
+    button: {
+        height: 50,
+        backgroundColor: 'white',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'green',
+        width: '100%'
+    },
+    buttonText: {
+        color: '#FFF',
         fontSize: 16
     }
 });

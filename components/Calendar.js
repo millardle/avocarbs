@@ -42,7 +42,7 @@ class FlatListCalendar extends Component {
                     onPress: () => {
                         this.props.parentFlatList.refs.editModal.showEditModal(flatListData[this.props.index], this);
                     },
-                    text: 'Edit', type: 'primary'
+                    text: 'Edit', backgroundColor: 'green'
                 }
             ],
             rowId: this.props.index,
