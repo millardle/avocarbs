@@ -12,6 +12,8 @@ App Landing Page:
 [https://www.figma.com/proto/ArTQwq7Tcukput6LuySUvp/Untitled?node-id=1%3A2&scaling=min-zoom](https://www.figma.com/proto/ArTQwq7Tcukput6LuySUvp/Untitled?node-id=1%3A2&scaling=min-zoom)
 <br />Expo Page:
 [https://expo.io/@millardle/avocarb](https://expo.io/@millardle/avocarb)
+<br />Loom Link (App Demo Video):
+[https://www.loom.com/share/a7ccc5e6d2184fd2be64e874bd7f1c9c](https://www.loom.com/share/a7ccc5e6d2184fd2be64e874bd7f1c9c)
 
 ## Disclaimers
 All images from categories are from [https://www.pexels.com/](https://www.pexels.com/)
