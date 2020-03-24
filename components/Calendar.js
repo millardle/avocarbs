@@ -56,7 +56,7 @@ class FlatListCalendar extends Component {
                     backgroundColor: 'white',
                     marginBottom: 1,
                 }}>
-                    <Text style={styles.flatListCalendar}>{this.props.item.name}</Text>
+                    <Text style={styles.flatListHeaderCalendar}>{this.props.item.name}</Text>
                     <Text style={styles.flatListCalendar}>{this.props.item.itemDescription}</Text>
                 </View>
             </Swipeout>
@@ -116,9 +116,18 @@ export default class Calendar extends Component {
 }
 
 const styles = StyleSheet.create({
+    flatListHeaderCalendar: {
+        color: 'black',
+        paddingTop: 24.5,
+        paddingLeft: 10,
+        fontSize: 20,
+        fontWeight: 'bold'
+    },
     flatListCalendar: {
         color: 'black',
-        padding: 10,
+        paddingTop: 5,
+        paddingLeft: 10,
+        paddingBottom: 24.5,
         fontSize: 16
     }
 });

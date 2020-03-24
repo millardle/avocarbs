@@ -76,7 +76,7 @@ class FlatListItem extends Component {
                     backgroundColor: 'white',
                     marginBottom: 1
                 }}>
-                    <Text style={styles.flatListItem}>{this.props.item.name}</Text>
+                    <Text style={styles.flatListHeaderItem}>{this.props.item.name}</Text>
                     <Text style={styles.flatListItem}>{this.props.item.itemDescription}</Text>
                 </View>
             </Swipeout>
@@ -164,9 +164,18 @@ export default class BasicFlatList extends Component {
 }
 
 const styles = StyleSheet.create({
+    flatListHeaderItem: {
+        color: 'black',
+        paddingTop: 10,
+        paddingLeft: 10,
+        fontSize: 16,
+        fontWeight: 'bold'
+    },
     flatListItem: {
         color: 'black',
-        padding: 10,
+        paddingTop: 5,
+        paddingLeft: 10,
+        paddingBottom: 10,
         fontSize: 16
     },
     button: {
