@@ -5,7 +5,8 @@ import {
     Text, 
     StyleSheet,
     Platform,
-    TouchableNativeFeedback
+    TouchableNativeFeedback,
+    ImageBackground
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -22,8 +23,17 @@ const CategoryGridTile = props => {
         style={styles.touchableCmp}
         onPress={props.onSelect}
     >
-        <View style={{ ...styles.container, ...{ backgroundColor: props.color } }}>
+        <View style={{ ...styles.container}}>
+            { props.image ? (
+                <ImageBackground source={{uri: props.image}} 
+            style={{width: 400, height: 400, resizeMode: 'cover', justifyContent: 'center'}}
+            >
             <Text style={styles.title} numberOfLines={2}>{props.title}</Text>
+            </ImageBackground>
+            ) 
+            : (
+                <Text style={styles.title} numberOfLines={2}>{props.title}</Text>
+            )} 
         </View>
     </TouchableCmp>
     </View>
@@ -48,7 +58,7 @@ const styles = StyleSheet.create({
         fontFamily: 'open-sans-bold',
         fontSize: 20,
         textAlign: 'center',
-        color: 'black',
+        color: 'white',
     },
     touchableCmp: {
         flex: 1

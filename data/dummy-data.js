@@ -24,8 +24,8 @@ export const CATEGORIES = [
 
 // Recommended
 export const CATEGORIES1 = [
-  new Category('c1', 'Top 10', '#FFB5EB'),
-  new Category('c2', 'Quick & Easy', '#C5A3FF'),
+  new Category('c1', 'Top 10', 'blue', 'https://images.pexels.com/photos/1123972/pexels-photo-1123972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
+  new Category('c2', 'Quick & Easy', '#C5A3FF', 'https://images.pexels.com/photos/1123972/pexels-photo-1123972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
   new Category('c3', 'On A Budget', '#B5B9FF'),
 ];
 
