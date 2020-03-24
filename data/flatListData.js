@@ -1,11 +1,11 @@
 import { NativeModules } from "react-native";
 
 let flatListData = [
-    {
-        'key': 'k1',
-        'name': 'Avocado',
-        'itemDescription': '5 large'
-    },
+    // {
+    //     'key': 'k1',
+    //     'name': 'Avocado',
+    //     'itemDescription': '5 large'
+    // },
     // {
     //     'key': 'k2',
     //     'name': 'Bubble Tea2',

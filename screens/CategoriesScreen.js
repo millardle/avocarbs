@@ -9,11 +9,7 @@ TextInput,
 } from 'react-native';
 import { CATEGORIES1, CATEGORIES2, CATEGORIES3, CATEGORIES4, CATEGORIES5 } from '../data/dummy-data';
 import CategoryGridTile from '../components/CategoryGridTile';
-// import CategoryGridTile1 from '../components/CategoryGridTile1';
 import CategoryGridTile2 from '../components/CategoryGridTile2';
-// import CategoryGridTile3 from '../components/CategoryGridTile3';
-// import CategoryGridTile4 from '../components/CategoryGridTile4';
-// import CategoryGridTile5 from '../components/CategoryGridTile5';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/colors';

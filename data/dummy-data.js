@@ -24,41 +24,41 @@ export const CATEGORIES = [
 
 // Recommended
 export const CATEGORIES1 = [
-  new Category('c1', 'Top 10', '#FFF'),
-  new Category('c2', 'Quick & Easy', '#008C3F'),
-  new Category('c3', 'On A Budget', '#008C3F'),
+  new Category('c1', 'Top 10', '#FFB5EB'),
+  new Category('c2', 'Quick & Easy', '#C5A3FF'),
+  new Category('c3', 'On A Budget', '#B5B9FF'),
 ];
 
 // Breakfast
 export const CATEGORIES2 = [
-  new Category('c4', 'Egg', '#008C3F'),
-  new Category('c5', 'Pancake', '#008C3F'),
-  new Category('c6', 'Sandwich', '#008C3F'),
-  new Category('c7', 'Salad', '#008C3F'), 
+  new Category('c4', 'Egg', '#AFCBFF'),
+  new Category('c5', 'Pancake', '#AFF8DB'),
+  new Category('c6', 'Sandwich', '#C4FAF8'),
+  new Category('c7', 'Salad', '#ACE7FF'), 
 ];
 
 // Lunch
 export const CATEGORIES3 = [
-  new Category('c7', 'Salad', '#008C3F'),
-  new Category('c8', 'Burger', '#008C3F'),
-  new Category('c9', 'Pies', '#008C3F'),
+  new Category('c7', 'Salad', '#DBFFD6'),
+  new Category('c8', 'Burger', '#E7FFAC'),
+  new Category('c9', 'Pies', '#FFFFD1'),
 
 ];
 
 // Dinner
 export const CATEGORIES4 = [
-  new Category('c10', 'Cauliflower', '#008C3F'),
-  new Category('c11', 'Pizza', '#008C3F'),
-  new Category('c12', 'Pasta', '#008C3F'),
-  new Category('c13', 'Vegetarian', '#008C3F')
+  new Category('c10', 'Cauliflower', '#FFC9DE'),
+  new Category('c11', 'Pizza', '#FFABAB'),
+  new Category('c12', 'Pasta', '#FFCCF9'),
+  new Category('c13', 'Vegetarian', '#AFF8D8')
 ];
 
 // Snacks & Desserts
 export const CATEGORIES5 = [
-  new Category('c14', 'Cake', '#008C3F'),
-  new Category('c15', 'Icecream', '#008C3F'),
-  new Category('c16', 'Chocolate', '#008C3F'),
-  new Category('c17', 'Pies', '#008C3F')
+  new Category('c14', 'Cake', '#D5AAFF'),
+  new Category('c15', 'Icecream', '#B5B9FF'),
+  new Category('c16', 'Chocolate', '#E7FFAC'),
+  new Category('c17', 'Pies', '#BFFCC6')
 ];
 
 export const MEALS = [

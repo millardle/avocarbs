@@ -30,6 +30,9 @@ export default class EditModal extends Component {
     generateKey = (numberOfCharacters) => {
         return require('random-string')({length: numberOfCharacters});
     }
+
+    initializeState = () => this.setState({newItemName: '', newItemDescription: ''})
+
     render() {
         return (
             <Modal
@@ -105,7 +108,9 @@ export default class EditModal extends Component {
                         flatListData[foundIndex].itemDescription = this.state.itemDescription;
 
                         this.state.flatlistItem.refreshFlatList();
+                        this.initializeState();
                         this.refs.myModal.close();
+                        
                     }}>
                 Save
                 </Button>

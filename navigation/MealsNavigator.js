@@ -18,7 +18,9 @@ import LoginScreen from '../screens/LoginScreen';
 
 const defaultStackNavOptions = {
         headerStyle: {
-        backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : '',
+        // backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
+        backgroundColor: Colors.primaryColor,
+        height: 80
         },
         headerTitleStyle: {
             fontFamily: 'open-sans-bold',
@@ -27,9 +29,11 @@ const defaultStackNavOptions = {
             fontFamily: 'open-sans'
         },
         headerTintColor:
-            Platform.OS === 'android' ? 'white' : Colors.primaryColor,
+            // Platform.OS === 'android' ? 'white' : Colors.primaryColor,
+            'white',
         // headerTitle: 'A Screen',
         headerTitleStyle: { width: Dimensions.get('window').width }
+        
 }
 
 const MealsNavigator = createStackNavigator(
@@ -83,6 +87,12 @@ const SettingsNavigator = createStackNavigator({
     defaultNavigationOptions: defaultStackNavOptions 
 });
 
+// const LoginNavigator = createStackNavigator({
+//     Login: LoginScreen
+// }, {
+//     defaultNavigationOptions: defaultStackNavOptions
+// });
+
 // Delete login navigator and from main navigator
 // const LoginNavigator = createStackNavigator({
 //     Login: LoginScreen
@@ -120,6 +130,13 @@ const MealsFavTabNavigator = createBottomTabNavigator({
             return <Ionicons name='ios-calendar' size={25} color={tabInfo.tintColor} />;
         }
     }},
+    // Settings: {
+    //     screen: SettingsNavigator,
+    //     navigationOptions: {
+    //         tabBarIcon: (tabInfo) => {
+    //         return <Ionicons name='ios-settings' size={25} color={tabInfo.tintColor} />;
+    //     }
+    // }}
     }, {
     tabBarOptions: {
         activeTintColor: Colors.primaryColor

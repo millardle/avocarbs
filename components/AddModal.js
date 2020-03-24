@@ -23,6 +23,9 @@ export default class AddModal extends Component {
     generateKey = (numberOfCharacters) => {
         return require('random-string')({length: numberOfCharacters});
     }
+
+    initializeState = () => this.setState({newItemName: '', newItemDescription: ''})
+
     render() {
         return (
             <Modal
@@ -97,6 +100,7 @@ export default class AddModal extends Component {
                         };
                         flatListData.push(newItem);
                         this.props.parentFlatList.refreshFlatList(newKey);
+                        this.initializeState();
                         this.refs.myModal.close();
                     }}>
                 Save

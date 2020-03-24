@@ -71,6 +71,13 @@ const FilterSwitch = props => {
             state={isVegetarian}
             onChange={newValue => setIsVegetarian(newValue)}
         />
+        <View style={{flex: 1, justifyContent: 'flex-end', marginBottom: 10}}>
+        {/* <TouchableOpacity                 onPress={() => {
+                    props.navigation.navigate({routeName:'Login'});
+            }}>
+            <Text>Logout</Text>
+        </TouchableOpacity> */}
+        </View>
         </View>
     );
     };
