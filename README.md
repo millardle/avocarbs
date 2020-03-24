@@ -13,5 +13,5 @@ App Landing Page:
 
 ## Disclaimers
 Images for categories are from [https://www.pexels.com/](https://www.pexels.com/)
-All recipe images and content are from [https://www.dietdoctor.com/low-carb/keto/recipes](https://www.dietdoctor.com/low-carb/keto/recipes)
+                                             All recipe images and content are from [https://www.dietdoctor.com/low-carb/keto/recipes](https://www.dietdoctor.com/low-carb/keto/recipes)
 
