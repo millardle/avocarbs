@@ -20,10 +20,14 @@ const defaultStackNavOptions = {
         headerStyle: {
         // backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
         backgroundColor: Colors.primaryColor,
-        height: 80
+        height: 60,     
         },
         headerTitleStyle: {
             fontFamily: 'open-sans-bold',
+        },
+        headerForceInset: {
+            top: 'never',
+            bottom: 'never'
         },
         headerBackTitleStyle: {
             fontFamily: 'open-sans'
