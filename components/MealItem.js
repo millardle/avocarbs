@@ -28,7 +28,7 @@ const MealItem = props => {
           </View>
           <View style={{ ...styles.mealRow, ...styles.mealDetail }}>
             <DefaultText>Prep Duration {props.duration} minutes</DefaultText>
-            <DefaultText>{props.complexity.toUpperCase()}</DefaultText>
+            <DefaultText>{props.netcarbs}g Net Carbs</DefaultText>
           </View>
         </View>
       </TouchableOpacity>

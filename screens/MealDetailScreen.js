@@ -60,8 +60,7 @@ const MealDetailScreen = props => {
       <Image source={{ uri: selectedMeal.imageUrl }} style={styles.image} />
       <View style={styles.details}>
         <DefaultText>Prep Duration: {selectedMeal.duration} minutes</DefaultText>
-        <DefaultText>{selectedMeal.complexity.toUpperCase()}</DefaultText>
-        {/* <DefaultText>{selectedMeal.affordability.toUpperCase()}</DefaultText> */}
+        <DefaultText>{selectedMeal.netcarbs}g Net Carbs</DefaultText>
       </View>
       <Text style={styles.title}>Ingredients</Text>
       {selectedMeal.ingredients.map(ingredient => (
