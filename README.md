@@ -2,6 +2,8 @@
 
 My capstone project for BrainStation Winter 2020 cohort made in react native made in 2 weeks.
 This app are for those who want keto and low-carb friendly recipes.
+The data for the app is not fully populated, but the core data is populated.
+The app is optimized for Android device. Tested on Oneplus 7t.
 
 
 ## Other Important Links
