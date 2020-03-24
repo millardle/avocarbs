@@ -1,5 +1,3 @@
-import { NativeModules } from "react-native";
-
 let flatListDataCalendar = [
     {
         'key': 'd1',

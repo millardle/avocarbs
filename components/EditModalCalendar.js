@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { AppRegistry, FlatList, StyleSheet, Text, 
-    View, Alert, Platform, TouchableHighlight, 
-    Dimensions, TextInput} from 'react-native';
-
+import { 
+    Text, 
+    Platform,
+    Dimensions, 
+    TextInput
+} from 'react-native';
 import Modal from 'react-native-modalbox';
 import Button from 'react-native-button';
+
 import flatListData from '../data/calendarData';
 
 let screen = Dimensions.get('window');
@@ -79,7 +82,7 @@ export default class EditModalCalendar extends Component {
                     }}
                     onPress={() => {
                         if (this.state.itemName.length == 0 || this.state.itemDescription.length == 0) {
-                            alert('You must enter item name and description');
+                            alert('You must enter a meal name');
                             return;
                         }
                         

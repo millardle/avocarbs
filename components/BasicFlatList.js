@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import { AppRegistry, FlatList, StyleSheet, Text, View, Alert, Platform, Image, Button } from 'react-native';
-import flatListData from '../data/flatListData';
-
+import { 
+    FlatList, 
+    StyleSheet, 
+    Text, 
+    View, 
+    Platform
+} from 'react-native';
 import Swipeout from 'react-native-swipeout';
-import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
+import flatListData from '../data/flatListData';
 import AddModal from './AddModal';
 import EditModal from './EditModal';
 
@@ -49,18 +55,6 @@ class FlatListItem extends Component {
                         const deletingRow = this.state.activeRowKey;
                             flatListData.splice(this.props.index, 1);
                             this.props.parentFlatList.refreshFlatList(deletingRow);
-                        // Alert.alert(
-                        // 'Alert',
-                        // 'Would you like to delete?',
-                        // [
-                        //     {text: 'No', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-                        //     {text: 'Yes', onPress: () => {
-                        //         flatListData.splice(this.props.index, 1);
-                        //         this.props.parentFlatList.refreshFlatList(deletingRow);
-                        //     }},
-                        // ],
-                        // { cancelable: true }
-                        // );
                     },
                     text: 'Remove', type: 'delete'
                 }
@@ -103,7 +97,6 @@ export default class BasicFlatList extends Component {
     }
 
     _onPressAdd () {
-        // alert('Added Item')
         this.refs.addModal.showAddModal();
     }
 
@@ -115,7 +108,6 @@ export default class BasicFlatList extends Component {
                 ref={'flatList'}
                 data={flatListData} 
                 renderItem={({item, index}) => {
-                    // console.log(`Item = ${JSON.stringify(item)}, index = ${index}`);
                     return (<FlatListItem item={item} index={index} parentFlatList={this}>
 
                     </FlatListItem>);
@@ -123,24 +115,6 @@ export default class BasicFlatList extends Component {
                 >
 
                 </FlatList>
-                {/* <View style={{
-                    backgroundColor: '#FFFFFF',
-                    height: 64,
-                    flexDirection: 'row',
-                    justifyContent: 'flex-end',
-                    alignItems: 'center'
-                }}>
-                <TouchableHighlight
-                underlayColor='#FFFFFF'
-                onPress={this._onPressAdd}
-                >
-                    <Image 
-                        style={{width: 20, height: 20, marginRight: 20}}
-                        source={require('../assets/add-icon.png')}
-                        onPress={this._onPressAdd}
-                    />
-                </TouchableHighlight>
-                </View> */}
                 <TouchableOpacity
                 style={styles.button}
                 onPress={this._onPressAdd}      

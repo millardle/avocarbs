@@ -2,17 +2,23 @@ import React from 'react';
 import { 
     FlatList, 
     StyleSheet,
-ScrollView,
-View,
-Text,
-TextInput,
+    ScrollView,
+    View,
+    Text,
+    TextInput,
 } from 'react-native';
-import { CATEGORIES1, CATEGORIES2, CATEGORIES3, CATEGORIES4, CATEGORIES5 } from '../data/dummy-data';
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+
+import { 
+    CATEGORIES1, 
+    CATEGORIES2, 
+    CATEGORIES3, 
+    CATEGORIES4, 
+    CATEGORIES5 
+} from '../data/dummy-data';
 import CategoryGridTile from '../components/CategoryGridTile';
 import CategoryGridTile2 from '../components/CategoryGridTile2';
-import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import HeaderButton from '../components/HeaderButton';
-import Colors from '../constants/colors';
 
 const CategoriesScreen = props => {
 

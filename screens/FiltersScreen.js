@@ -61,11 +61,11 @@ const FilterSwitch = props => {
             state={isLactoseFree}
             onChange={newValue => setIsLactoseFree(newValue)}
         />
-        <FilterSwitch
+        {/* <FilterSwitch
             label="Vegan"
             state={isVegan}
             onChange={newValue => setIsVegan(newValue)}
-        />
+        /> */}
         <FilterSwitch
             label="Vegetarian"
             state={isVegetarian}

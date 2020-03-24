@@ -2,8 +2,13 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer} from 'react-navigation';
-import { Platform, Dimensions } from 'react-native';
+import { 
+    Platform, 
+    Dimensions 
+} from 'react-native';
 import { createDrawerNavigator } from 'react-navigation-drawer';
+import { Ionicons } from '@expo/vector-icons';
+
 import CategoriesScreen from '../screens/CategoriesScreen';
 import CategoryMealsScreen from '../screens/CategoryMealsScreen';
 import MealDetailScreen from '../screens/MealDetailScreen';
@@ -11,9 +16,8 @@ import Colors from '../constants/colors';
 import FavouritesScreen from '../screens/FavouritesScreen';
 import GroceryListScreen from '../screens/GroceryListScreen';
 import CalendarScreen from '../screens/CalendarScreen';
-import { Ionicons } from '@expo/vector-icons';
 import FiltersScreen from '../screens/FiltersScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+// import SettingsScreen from '../screens/SettingsScreen';
 import LoginScreen from '../screens/LoginScreen';
 
 const defaultStackNavOptions = {
@@ -33,9 +37,7 @@ const defaultStackNavOptions = {
             fontFamily: 'open-sans'
         },
         headerTintColor:
-            // Platform.OS === 'android' ? 'white' : Colors.primaryColor,
             'white',
-        // headerTitle: 'A Screen',
         headerTitleStyle: { width: Dimensions.get('window').width }
         
 }

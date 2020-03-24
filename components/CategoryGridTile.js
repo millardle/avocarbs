@@ -8,7 +8,6 @@ import {
     TouchableNativeFeedback,
     ImageBackground
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 
 const CategoryGridTile = props => {
     let TouchableCmp = TouchableOpacity;
@@ -26,7 +25,7 @@ const CategoryGridTile = props => {
         <View style={{ ...styles.container}}>
             { props.image ? (
                 <ImageBackground source={{uri: props.image}} 
-            style={{width: 400, height: 400, resizeMode: 'cover', justifyContent: 'center'}}
+            style={{width: 300, height: 180, resizeMode: 'cover', justifyContent: 'flex-end'}}
             >
             <Text style={styles.title} numberOfLines={2}>{props.title}</Text>
             </ImageBackground>
@@ -42,7 +41,6 @@ const CategoryGridTile = props => {
 
 const styles = StyleSheet.create({
     gridItem: {
-        // flex: 1,
         width: 300,
         margin: 15,
         marginTop: 10,
@@ -52,13 +50,15 @@ const styles = StyleSheet.create({
         overflow: Platform.OS === 'android' && Platform.Version >= 22 
             ? 'hidden' 
             : 'visable',
-        // elevation: 5
     },
     title: {
         fontFamily: 'open-sans-bold',
         fontSize: 20,
         textAlign: 'center',
         color: 'white',
+        width: '100%',
+        backgroundColor: 'rgba(0,0,0,0.3)',
+        paddingVertical: 5
     },
     touchableCmp: {
         flex: 1
@@ -66,10 +66,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         borderRadius: 10,
-        // shadowColor: 'black',
-        // shadowOpacity: 0.26,
-        // shadowOffset: { width: 0, height: 2 },
-        // shadowRadius: 10,
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center'

@@ -24,41 +24,40 @@ export const CATEGORIES = [
 
 // Recommended
 export const CATEGORIES1 = [
-  new Category('c1', 'Top 10', 'blue', 'https://images.pexels.com/photos/1123972/pexels-photo-1123972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
-  new Category('c2', 'Quick & Easy', '#C5A3FF', 'https://images.pexels.com/photos/1123972/pexels-photo-1123972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
-  new Category('c3', 'On A Budget', '#B5B9FF'),
+  new Category('c1', 'Top 10', 'blue', 'https://images.pexels.com/photos/793785/pexels-photo-793785.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
+  new Category('c2', 'Quick & Easy', '#C5A3FF', 'https://images.pexels.com/photos/90893/pexels-photo-90893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
+  new Category('c3', 'On A Budget', '#B5B9FF', 'https://images.pexels.com/photos/3877676/pexels-photo-3877676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
 ];
 
 // Breakfast
 export const CATEGORIES2 = [
-  new Category('c4', 'Egg', '#AFCBFF'),
-  new Category('c5', 'Pancake', '#AFF8DB'),
-  new Category('c6', 'Sandwich', '#C4FAF8'),
-  new Category('c7', 'Salad', '#ACE7FF'), 
+  new Category('c4', 'Eggs', '#AFCBFF', 'https://images.pexels.com/photos/824635/pexels-photo-824635.jpeg'),
+  new Category('c5', 'Pancakes', '#AFF8DB', 'https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
+  new Category('c6', 'Sandwiches', '#C4FAF8', 'https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
 ];
 
 // Lunch
 export const CATEGORIES3 = [
-  new Category('c7', 'Salad', '#DBFFD6'),
-  new Category('c8', 'Burger', '#E7FFAC'),
-  new Category('c9', 'Pies', '#FFFFD1'),
+  new Category('c7', 'Salads', '#ACE7FF', 'https://images.pexels.com/photos/1580466/pexels-photo-1580466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'), 
+  new Category('c8', 'Burgers', '#E7FFAC', 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg'),
+  new Category('c9', 'Soups', '#FFFFD1', 'https://images.pexels.com/photos/3559899/pexels-photo-3559899.jpeg'),
 
 ];
 
 // Dinner
 export const CATEGORIES4 = [
-  new Category('c10', 'Cauliflower', '#FFC9DE'),
-  new Category('c11', 'Pizza', '#FFABAB'),
-  new Category('c12', 'Pasta', '#FFCCF9'),
-  new Category('c13', 'Vegetarian', '#AFF8D8')
+  new Category('c10', 'Cauliflower', '#FFC9DE', 'https://images.pexels.com/photos/2226987/pexels-photo-2226987.jpeg'),
+  new Category('c11', 'Pizza', '#FFABAB', 'https://images.pexels.com/photos/3915857/pexels-photo-3915857.jpeg'),
+  new Category('c12', 'Pasta', '#FFCCF9', 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
+  new Category('c13', 'Vegetarian', '#AFF8D8', 'https://images.pexels.com/photos/3510155/pexels-photo-3510155.jpeg')
 ];
 
 // Snacks & Desserts
 export const CATEGORIES5 = [
-  new Category('c14', 'Cake', '#D5AAFF'),
-  new Category('c15', 'Icecream', '#B5B9FF'),
-  new Category('c16', 'Chocolate', '#E7FFAC'),
-  new Category('c17', 'Pies', '#BFFCC6')
+  new Category('c14', 'Cake', '#D5AAFF', 'https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
+  new Category('c15', 'Icecream', '#B5B9FF', 'https://images.pexels.com/photos/2161643/pexels-photo-2161643.jpeg'),
+  new Category('c16', 'Chocolate', '#E7FFAC', 'https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg'),
+  new Category('c17', 'Pies', '#BFFCC6', 'https://images.pexels.com/photos/461431/pexels-photo-461431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
 ];
 
 export const MEALS = [

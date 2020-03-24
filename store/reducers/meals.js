@@ -1,5 +1,8 @@
 import { MEALS } from '../../data/dummy-data';
-import { TOGGLE_FAVOURITE, SET_FILTERS } from '../actions/meals';
+import { 
+    TOGGLE_FAVOURITE, 
+    SET_FILTERS 
+} from '../actions/meals';
 
 const initialState = {
     meals: MEALS,

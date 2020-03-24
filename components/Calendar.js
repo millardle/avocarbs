@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import { AppRegistry, FlatList, StyleSheet, Text, View, Alert, Platform, Image } from 'react-native';
-import flatListData from '../data/calendarData';
-
+import { 
+    FlatList, 
+    StyleSheet, 
+    Text, 
+    View, 
+    Platform
+} from 'react-native';
 import Swipeout from 'react-native-swipeout';
-import { TouchableHighlight } from 'react-native-gesture-handler';
+
+import flatListData from '../data/calendarData';
 import AddModal from './AddModal';
 import EditModal from './EditModalCalendar';
 
@@ -95,9 +100,7 @@ export default class Calendar extends Component {
                 ref={'flatList'}
                 data={flatListData} 
                 renderItem={({item, index}) => {
-                    // console.log(`Item = ${JSON.stringify(item)}, index = ${index}`);
                     return (<FlatListCalendar item={item} index={index} parentFlatList={this}>
-
                     </FlatListCalendar>);
                 }}
                 >

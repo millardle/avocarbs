@@ -1,12 +1,27 @@
-import React, { useEffect, useCallback } from 'react';
-import { ScrollView, View, Image, Text, Button, StyleSheet } from 'react-native';
+import React, { 
+  useEffect, 
+  useCallback 
+} from 'react';
+import { 
+  ScrollView, 
+  View, 
+  Image, 
+  Text, 
+  Button, 
+  StyleSheet 
+} from 'react-native';
+import { 
+  useSelector, 
+  useDispatch 
+} from 'react-redux';
+import { 
+  HeaderButtons, 
+  Item 
+} from 'react-navigation-header-buttons';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton';
 import DefaultText from '../components/DefaultText';
 import { toggleFavourite } from '../store/actions/meals';
-import Colors from '../constants/colors';
 
 const ListItem = props => {
   return (

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { AppRegistry, FlatList, StyleSheet, Text, 
-    View, Alert, Platform, TouchableHighlight, 
-    Dimensions, TextInput} from 'react-native';
+import { 
+    Text, 
+    Platform,
+    Dimensions, 
+    TextInput} from 'react-native';
 
 import Modal from 'react-native-modalbox';
 import Button from 'react-native-button';

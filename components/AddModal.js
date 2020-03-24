@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { AppRegistry, FlatList, StyleSheet, Text, 
-    View, Alert, Platform, TouchableHighlight, 
-    Dimensions, TextInput} from 'react-native';
+import { 
+    Text, 
+    Platform, 
+    Dimensions, 
+    TextInput
+} from 'react-native';
 
 import Modal from 'react-native-modalbox';
 import Button from 'react-native-button';
@@ -10,6 +13,7 @@ import flatListData from '../data/flatListData';
 let screen = Dimensions.get('window');
 
 export default class AddModal extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -17,9 +21,11 @@ export default class AddModal extends Component {
             newItemDescription: ''
         }
     }
+
     showAddModal = () => {
         this.refs.myModal.open();
     }
+    
     generateKey = (numberOfCharacters) => {
         return require('random-string')({length: numberOfCharacters});
     }

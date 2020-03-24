@@ -14,7 +14,7 @@ const LoginScreen = props => {
             </View>
 
             <View style={styles.center}>
-                <Text style={styles.title}>Avocarb</Text>
+                <Text style={styles.title}>Avocarbs</Text>
             </View>
 
             <View style={styles.bottom}>

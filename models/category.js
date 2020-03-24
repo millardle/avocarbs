@@ -8,5 +8,3 @@ class Category {
 };
 
 export default Category;
-
-// constructor(id, title, color) {
